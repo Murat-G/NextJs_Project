@@ -3,8 +3,10 @@ import { useState } from 'react'
 export default function Home() {
 
 const [state, setState] = useState( {file: "",imagePreviewUrl: ""})
+const [comment, setComment] = useState("")
+const [title, setTitle] = useState("")
 
-function onChange(e) {
+function onWrite(e) {
   let file = e.target.files;
   let reader = new FileReader();
 
@@ -16,6 +18,7 @@ function onChange(e) {
   }
     reader.readAsDataURL(file[0]);
 }  
+  
   let {imagePreviewUrl} = state;
   return (
     <div className={styles.container}>
@@ -28,14 +31,22 @@ function onChange(e) {
 
         <div className={styles.main}>
 
-          <input type="text" placeholder="New Title" className={styles.mainInput} name="Title" />
+          <input 
+            type="text" 
+            placeholder="New Title" 
+            className={styles.mainInput} 
+            name="Title" 
+            onChange={(e) => setTitle(e.target.value)} 
+          />
 
           <div className={styles.mainDesc}>
             <textarea
               name="comments"
               placeholder="New Description"
               className={styles.mainDescInput}
-              maxLength="1375">
+              maxLength="1460"
+              onChange={(e) => setComment(e.target.value)} 
+            >
             </textarea>
           </div>
 
@@ -50,15 +61,18 @@ function onChange(e) {
                   styles.uplodaNone
                 }        
               />
-              
-              <input type="file" 
-                id="myfile" name="myfile" 
-                className={imagePreviewUrl ? styles.plusButtonNone : styles.plusButton}  
-                onChange={(e) => onChange(e) }
+              <label for="myfile" >
+                <span className={imagePreviewUrl ? styles.plusButton : styles.plusSpan}>+</span>
+              </label>
+              <input 
+                type="file" 
+                id="myfile" 
+                name="myfile" 
+                className={styles.plusFile}  
+                onChange={(e) => onWrite(e)}
               />
               
-              {/* <button className={styles.plusButton}> <span className={styles.plusSpan}>+</span> </button>
-              <p className={styles.imageText}>GÖRSEL</p> */}
+              <p className={imagePreviewUrl ? styles.imageNoneText : styles.imageText}>GÖRSEL</p> 
 
             </div>
           </div>
