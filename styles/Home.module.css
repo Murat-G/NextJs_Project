@@ -35,7 +35,7 @@
   color: red;
 }
 .mainInput:focus{
-  background-color: lightblue;
+  background-color: rgb(172, 219, 235);
 }
 .containerHeader {
   width: 150px;
@@ -127,6 +127,16 @@
     display: flex;
     margin: 10px 10px 5px 0px;
     height: 50%;
+}
+.mainInputDone{
+  width: 100%;
+  padding: 12px 0px;
+  border: none;
+  outline: none;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform:capitalize;
 }
 .content2 {
   display: flex;

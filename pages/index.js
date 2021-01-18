@@ -49,6 +49,7 @@ return (
               onChange={(e) => setTitle(e.target.value)} 
               autocomplete="off"
               value={title}
+              maxLength="60"
             />
 
             <div className={styles.mainDesc}>
@@ -112,7 +113,7 @@ return (
 
             <input 
               type="text" 
-              className={styles.mainInput} 
+              className={styles.mainInputDone} 
               name="Title" 
               value={save.saveTitle}
               readOnly
