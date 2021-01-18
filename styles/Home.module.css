@@ -1,16 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
 }
-
 .content {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 20px;
+  align-self: center;
+  margin-top: 40px;
+  margin-bottom: 25px;
   width: 40em;
-  border-radius: 10px;
 }
 .main {
   display: flex;
@@ -18,8 +16,9 @@
   width: 40em;
   height: 50em;
   border: 2px solid black;
-  border-radius: 0px 15px 15px 15px;;
+  border-radius: 0px 15px 15px 15px;
   padding: 20px;
+  align-self: center;
 }
 .mainInput{
   width: 100%;
@@ -29,6 +28,11 @@
   color: red;
   font-weight: bold;
   cursor: pointer;
+  font-size: 16px;
+  text-transform:capitalize;
+}
+.mainInput::placeholder{
+  color: red;
 }
 .mainInput:focus{
   background-color: lightblue;
@@ -38,6 +42,7 @@
   border: 2px solid black;
   border-radius: 15px 15px 0px 0px;
   border-bottom: none;
+  align-self: flex-start;
 }
 .headerTitle {
   text-align: center;
@@ -49,9 +54,6 @@
 }
 .mainDescInput{
   width: 100%;
-  height: 100%;
-  /* padding: 12px 20px; */
-  /* box-sizing: border-box; */
   border: none;
   outline: none;
   cursor: pointer;
@@ -59,7 +61,7 @@
   resize:none
 }
 .mainImage {
-  background-color: orange;
+  background-color:rgb(224, 168, 154);
   display: flex;
   margin: 10px 10px 5px 0px;
   height: 50%;
@@ -76,7 +78,7 @@
   width: 100%;
   height: 100%;
 }
-.uplodaNone{
+.uploadNone{
   display: none;
 }
 .plusSpan {
@@ -98,10 +100,6 @@
 .imageNoneText {
   display: none;
 }
-/* .plusButton:hover {
-  box-shadow: 3px 3px 3px 3px purple;
-} */
-
 .button {
   background-color: lightgray;
   border: none;
@@ -113,8 +111,8 @@
   cursor: pointer;
   outline:none;
 }
-/* .buttonActive {
-  background-color: lightgray;
+.buttonActive {
+  background-color: rgb(33, 150, 83);;
   border: none;
   width: 30px;
   height: 30px;
@@ -123,76 +121,20 @@
   margin-right: 10px;
   cursor: pointer;
   outline:none;
-} */
-
-/* .button:hover {
-  box-shadow: 3px 1px 3px lightgray;
-} */
-
-
-/* .footer img {
-  margin-left: 0.5rem;
 }
-
-.footer a {
+.mainDone{
+    background-color: rgb(223, 219, 219);
+    display: flex;
+    margin: 10px 10px 5px 0px;
+    height: 50%;
+}
+.content2 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 25px;
+  width: 40em;
 }
-
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.line {
+  border: 5px solid rgb(196, 196, 196);
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-} */
